@@ -1,7 +1,8 @@
-package pushlynx
+package main
 
 import (
 	"fmt"
+	"log"
 	"runtime"
 )
 
@@ -17,4 +18,10 @@ func RunGit() error {
 		fmt.Println("Why complicate life buddy?")
 	}
 	return nil
+}
+
+func main() {
+	if err := RunGit(); err != nil {
+		log.Fatal("An error occured", err)
+	}
 }
